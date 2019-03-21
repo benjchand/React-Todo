@@ -10,6 +10,8 @@ const ToDoList = props => {
               <ToDo
                 key = {itemFromArrayBeingExamined.id}
                 toDoItemBeingLookedUp = {itemFromArrayBeingExamined}
+                item = {itemFromArrayBeingExamined}
+                toggleItem = {props.toggleItemFromApp}
               />
             ))}
         </div>

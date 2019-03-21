@@ -6,13 +6,14 @@ const ToDoForm = props => {
             <input 
                 value={props.value}
                 onChange={props.changeToDoItemForm}
+                placeholder='Add A New Item'
             
             />
 
 
 
             <button onClick={props.addToDoListForm}> Add To-Do Item</button>
-            <button> Clear Completed Items</button>
+            <button onClick={props.clearCompletedTasksForm}> Clear Completed Items</button>
         </form>
     )
 }

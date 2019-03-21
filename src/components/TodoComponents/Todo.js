@@ -2,7 +2,7 @@ import React from 'react';
 
 const ToDo = props => {
     return (
-        <div>
+        <div className={`task${props.item.completed ? " completed" : ""}`} onClick = {() => props.toggleItem(props.item.id)}>
             {props.toDoItemBeingLookedUp.task}
         </div>
     )
