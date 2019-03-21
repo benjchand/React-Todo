@@ -9,11 +9,12 @@ const ToDoForm = props => {
                 placeholder='Add A New Item'
             
             />
+            
 
 
 
-            <button onClick={props.addToDoListForm}> Add To-Do Item</button>
-            <button onClick={props.clearCompletedTasksForm}> Clear Completed Items</button>
+            <button onClick={props.addToDoListForm}> Add Item</button>
+            <button onClick={props.clearCompletedTasksForm}> Clear Completed</button>
         </form>
     )
 }

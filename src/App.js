@@ -10,12 +10,12 @@ import "./components/TodoComponents/Todo.css";
 
 const theWholeList = [
   {
-    task: 'Learn React',
+    task: '- Add new tasks below',
     id: 1553117627110,
     completed: false,
   },
   {
-    task: 'Make a To-Do List',
+    task: '- Click on an item to mark it complete',
     id: 1553117679511,
     completed: false,
   }
@@ -42,7 +42,7 @@ class App extends React.Component {
 
   addToDoItemFunction = event => {
     event.preventDefault();
-    const newToDo = {task: this.state.toDoItem, id: Date.now(), completed: false};
+    const newToDo = {task: '-    '+this.state.toDoItem, id: Date.now(), completed: false};
     this.setState({
       toDoList: [...this.state.toDoList, newToDo],
       toDoItem: ''
@@ -83,20 +83,22 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <h2>Welcome to your Todo App!</h2>
-        <div>
+      
+      <div className="to-Do-Wrapper">
+        <h2>MY TO-DO LIST:</h2>
+        <div className="to-Do-List-Div">
         <ToDoList
           toDoListArrayBeingReferenced= {this.state.toDoList}
           toggleItemFromApp = {this.toggleItemFunction}
         />
         </div>
-        <ToDoForm 
+        <div className="to-Do-Form-Div"><ToDoForm 
           value={this.state.toDoItem}
           changeToDoItemForm={this.changeToDoItemFunction}
           addToDoListForm = {this.addToDoItemFunction}
           clearCompletedTasksForm = {this.clearCompletedTasksFunction}
         />
+        </div>
       </div>
     );
   }

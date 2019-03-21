@@ -1,8 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:300i,400,500,700,900');
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+p,
+span {
+  color: #9995b5;
+  font-family: 'Rubik', sans-serif;
+
+}
+
+
+
 .task.completed {
-    color: darkgray;
+    color: #9c8249;
     text-decoration: line-through;
+    font-weight: 300;
+    font-style: italic
   }
 
   .task {
-      color: black;
+      color: #e3dfe3;
+      font-size: 30px;
+      padding: 3px 0;
+      font-weight: 400;
+  }
+
+  .to-Do-Wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      height: 10000px;
+      margin: 0;
+      padding: 30px 0 0;
+      background-color:  #212448;
+  }
+
+  h2 {
+      font-size: 60px;
+      font-weight: 500;
+  }
+
+
+  .to-Do-List-Div {
+      width: 625px;
+      margin-left: 154px;
+      
+
+  }
+
+  .to-Do-Form-Div {
+      padding: 25px 0 0;
+      margin: 30px 0 0;
+  }
+
+  form > input {
+    background-color: #212448;
+    border: 0;
+    padding: 10px 0;
+    font-size: 23px;
+    width: 240px;
+    outline: 0;
+    color: #e3dfe3;
+    border-bottom: 2px solid #87849f;
+    margin-right: 8px;
+  }
+  button {
+      background-color: #5f4845;
+      height: 20px;
+      margin: 0 15px;
+      padding: 20px 15px 35px;;
+      color: white;
+      border: 4px solid #5f4845;
+      border-radius: 8px;
+      line-height: 15px;
+      font-size: 20px;
   }
