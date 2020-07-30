@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Todo from './Todo';
 // your components will all go in this `component` directory.
 // feel free to change this component.js into TodoList.js
 
 const TodoList = props => {
+    let { todoList, toggleTodoComplete } = props;
 
     return (
         <div>
@@ -13,6 +14,7 @@ const TodoList = props => {
                     todoTask={itemFromStateBeingExamined.task}
                     todoID={itemFromStateBeingExamined.id}
                     todoCompleted={itemFromStateBeingExamined.completed}
+                    toggleTodoComplete={toggleTodoComplete}
                 />
             ))}
         </div>

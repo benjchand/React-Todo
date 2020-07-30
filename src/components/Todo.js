@@ -1,10 +1,14 @@
 import React from 'react';
+import './Todo.css';
 
 const TodoItem = props => {
-    const { todoTask, todoID, todoCompleted } = props
+    const { todoTask, todoID, todoCompleted, toggleTodoComplete } = props;
+
+
     return (
-        <div>
-            <h2>{todoTask}</h2>
+        <div className='todo-main-div'>
+            <h2 className='todo-task' style={todoCompleted ? { textDecoration: 'line-through' } : null}>{todoTask}</h2>
+            <input className='todo-checkbox' type='checkbox' checked={todoCompleted} onClick={() => toggleTodoComplete(todoID)} />
         </div>
     )
 }
