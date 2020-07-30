@@ -1,0 +1,8 @@
+.todo-main-div{
+    display: flex;
+    align-items: center;
+}
+
+.todo-checkbox{
+    margin: 0 10px;
+}
