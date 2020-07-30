@@ -4,7 +4,7 @@ import Todo from './Todo';
 // feel free to change this component.js into TodoList.js
 
 const TodoList = props => {
-    let { todoList, hideCompleted } = props;
+    let { todoList, toggleTodoComplete } = props;
 
     return (
         <div>
@@ -14,6 +14,7 @@ const TodoList = props => {
                     todoTask={itemFromStateBeingExamined.task}
                     todoID={itemFromStateBeingExamined.id}
                     todoCompleted={itemFromStateBeingExamined.completed}
+                    toggleTodoComplete={toggleTodoComplete}
                 />
             ))}
         </div>

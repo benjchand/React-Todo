@@ -2,15 +2,15 @@ import React from 'react';
 
 
 const TodoForm = props => {
-    const { handleSubmit, stateNewTask, showCompleted } = props
+    const { handleSubmit, changeNewTask, hideCompleted, value } = props
 
     return (
         <div className='todo-form-div'>
-            <form onSubmit={handleSubmit()}>
-                <input type='text' />
+            <form onSubmit={changeNewTask}>
+                <input type='text' onChange={changeNewTask} name='newTask' value={value} />
                 <div className='button-div'>
-                    <button>Add To-do Item</button>
-                    <button>Clear Completed</button>
+                    <button onClick={handleSubmit}>Add To-do Item</button>
+                    <button onClick={hideCompleted}>Clear Completed</button>
                 </div>
             </form>
         </div>
